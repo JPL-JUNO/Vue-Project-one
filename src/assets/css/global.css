@@ -4,6 +4,8 @@ body,
     height: 100%;
     margin: 0;
     padding: 0;
+    /* 可以设置最小宽度来处理屏幕某些组件的缩放问题 */
+    /* min-width: 1200px; */
 }
 
 .el-breadcrumb{
