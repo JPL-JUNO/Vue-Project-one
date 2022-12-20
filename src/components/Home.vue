@@ -86,7 +86,6 @@ export default {
   created() {
     this.getMenuList()
     this.activePath = window.sessionStorage.getItem('activePath')
-    this.activePath = this.activePath
   },
   methods: {
     logout() {

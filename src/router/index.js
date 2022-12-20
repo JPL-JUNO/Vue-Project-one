@@ -7,6 +7,7 @@ import Users from '../components/user/Users.vue'
 import Rights from '../components/power/Rights.vue'
 import Roles from '../components/power/Roles.vue'
 import Category from '../components/goods/Category.vue'
+import Orders from '../components/order/Orders.vue'
 
 Vue.use(Router)
 
@@ -15,25 +16,26 @@ const router = new Router({
     {
       // 访问根路径时将自动跳转到login页面
       path: '/',
-      redirect: '/login'
+      redirect: '/login',
     },
     {
       path: '/login',
-      component: Login
+      component: Login,
     },
     {
       path: '/home',
       component: Home,
       redirect: '/welcome',
       children: [
-        { path: '/welcome', component: Welcome},
-        { path: '/users', component: Users},
-        { path: '/rights', component: Rights},
+        { path: '/welcome', component: Welcome },
+        { path: '/users', component: Users },
+        { path: '/rights', component: Rights },
         { path: '/roles', component: Roles },
-        {path: '/Categories', component: Category},
-      ]
-    }
-  ]
+        { path: '/Categories', component: Category },
+        { path: '/orders', component: Orders },
+      ],
+    },
+  ],
 })
 
 // 挂载路由导航守卫
